@@ -1,0 +1,337 @@
+Build started at 2019-04-26T14:18:02.031565
+Main binary: d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\python.exe
+Python system: Windows
+The Meson build system
+Version: 0.50.0
+Source dir: d:\repos\gstreamer-media-SDK-ben
+Build dir: d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc
+Build type: native build
+Project name: gst_mfx
+Project version: 2.0.2
+Sanity testing C compiler: cl
+Is cross compiler: False.
+Sanity check compiler command line: cl d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckc.c /Fed:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckc.exe
+Sanity check compile stdout:
+sanitycheckc.c
+Microsoft (R) Incremental Linker Version 14.20.27508.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckc.exe 
+sanitycheckc.obj 
+
+-----
+Sanity check compile stderr:
+Microsoft (R) C/C++ Optimizing Compiler Version 19.20.27508.1 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+-----
+Running test binary command: d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckc.exe
+Native C compiler: cl (msvc 19.20.27508.1)
+Sanity testing C++ compiler: cl
+Is cross compiler: False.
+Sanity check compiler command line: cl d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckcpp.cc /Fed:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckcpp.exe
+Sanity check compile stdout:
+sanitycheckcpp.cc
+Microsoft (R) Incremental Linker Version 14.20.27508.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckcpp.exe 
+sanitycheckcpp.obj 
+
+-----
+Sanity check compile stderr:
+Microsoft (R) C/C++ Optimizing Compiler Version 19.20.27508.1 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+-----
+Running test binary command: d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\sanitycheckcpp.exe
+Native C++ compiler: cl (msvc 19.20.27508.1)
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Pkg-config binary for MachineChoice.HOST is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default pkg-config fallback at pkg-config
+Trying pkg-config binary pkg-config for machine MachineChoice.HOST at ['D:\\pkgconfig\\bin\\pkg-config.EXE']
+Found pkg-config: D:\pkgconfig\bin\pkg-config.EXE (0.28)
+Determining dependency 'glib-2.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion glib-2.0` -> 0
+2.56.1
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags glib-2.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE glib-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE glib-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lglib-2.0 -lintl
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmpmtd9ezvb
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmpmtd9ezvb\testfile.cpp /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmpmtd9ezvb\output.exe /MDd /Od 
+
+Code:
+ #include<stdio.h>
+        
+        int main(int argc, char **argv) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        };
+Compiler stdout:
+ testfile.cpp
+Note: including file: C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt\stdio.h
+Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt\corecrt.h
+Note: including file:   D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.20.27508\include\vcruntime.h
+Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.20.27508\include\sal.h
+Note: including file:     D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.20.27508\include\concurrencysal.h
+Note: including file:    D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.20.27508\include\vadefs.h
+Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt\corecrt_wstdio.h
+Note: including file:   C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt\corecrt_stdio_config.h
+
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmp92bif56t
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmp92bif56t\testfile.cpp /nologo /showIncludes /c /FoC:\Users\brush\AppData\Local\Temp\tmp92bif56t\output.obj /Od --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ testfile.cpp
+
+Compiler stderr:
+ cl : Command line warning D9002 : ignoring unknown option '--print-search-dirs'
+
+Dependency glib-2.0 found: YES 2.56.1
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gobject-2.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gobject-2.0` -> 0
+2.56.1
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gobject-2.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gobject-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gobject-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gobject-2.0 found: YES 2.56.1
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gio-2.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gio-2.0` -> 0
+2.56.1
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gio-2.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gio-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gio-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gio-2.0 found: YES 2.56.1
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gmodule-2.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gmodule-2.0` -> 0
+2.56.1
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gmodule-2.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gmodule-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgmodule-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gmodule-2.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgmodule-2.0 -lglib-2.0 -lintl
+Dependency gmodule-2.0 found: YES 2.56.1
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-1.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gstreamer-1.0` -> 0
+1.15.2
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gstreamer-1.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gstreamer-1.0 found: YES 1.15.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-base-1.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gstreamer-base-1.0` -> 0
+1.15.2
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gstreamer-base-1.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-base-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-base-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gstreamer-base-1.0 found: YES 1.15.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-video-1.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gstreamer-video-1.0` -> 0
+1.15.2
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gstreamer-video-1.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include/orc-0.4 -ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-video-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-video-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gstreamer-video-1.0 found: YES 1.15.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-allocators-1.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gstreamer-allocators-1.0` -> 0
+1.15.2
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gstreamer-allocators-1.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-allocators-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstallocators-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-allocators-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstallocators-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gstreamer-allocators-1.0 found: YES 1.15.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-pbutils-1.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gstreamer-pbutils-1.0` -> 0
+1.15.2
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gstreamer-pbutils-1.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include/orc-0.4 -ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-pbutils-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstpbutils-1.0 -lgstaudio-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-pbutils-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstpbutils-1.0 -lgstaudio-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gstreamer-pbutils-1.0 found: YES 1.15.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'mfx' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion mfx` -> 1
+
+CMake binary for MachineChoice.HOST is not cached
+CMake binary missing from cross or native file, or env var undefined.
+Trying a default CMake fallback at cmake
+Trying CMake binary cmake for machine MachineChoice.HOST at ['D:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.EXE']
+Found CMake: D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.EXE (3.13.19031502-MSVC_2)
+Extracting basic cmake information
+Try CMake generator: auto
+Called `D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.EXE --trace-expand .` in d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private/cmake_mfx -> 0
+  -- Module search paths:    []
+  -- CMake root:             D:/Program
+  -- CMake architectures:    []
+  -- CMake lib search paths: ['lib', 'lib32', 'lib64', 'libx32', 'share']
+Dependency mfx found: NO (tried pkgconfig and cmake)
+DEPRECATION: Project targetting '>= 0.36.0' but tried to use feature deprecated since '0.48.0': python3 module
+Running command: d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\python.exe -c import os; print(os.environ.get("INTELMEDIASDKROOT", os.environ.get("MFX_HOME", "")))
+--- stdout ---
+D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\
+
+--- stderr ---
+
+
+Library mfx found: YES
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmp2avmfm55
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmp2avmfm55\testfile.c /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmp2avmfm55\output.exe /MDd /Od legacy_stdio_definitions.lib /link /FORCE:UNRESOLVED 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ testfile.c
+
+Compiler stderr:
+ 
+Library legacy_stdio_definitions found: YES
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmpz0z61coe
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmpz0z61coe\testfile.c /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmpz0z61coe\output.exe /MDd /Od d3d11.lib /link /FORCE:UNRESOLVED 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ testfile.c
+
+Compiler stderr:
+ 
+Library d3d11 found: YES
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmp11xr5dse
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmp11xr5dse\testfile.c /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmp11xr5dse\output.exe /MDd /Od gdi32.lib /link /FORCE:UNRESOLVED 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ testfile.c
+
+Compiler stderr:
+ 
+Library gdi32 found: YES
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmp4d8yihgt
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmp4d8yihgt\testfile.c /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmp4d8yihgt\output.exe /MDd /Od shcore.lib /link /FORCE:UNRESOLVED 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ testfile.c
+
+Compiler stderr:
+ 
+Library shcore found: YES
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-gl-1.0' with pkg-config executable 'D:\\pkgconfig\\bin\\pkg-config.EXE'
+Called `D:\pkgconfig\bin\pkg-config.EXE --modversion gstreamer-gl-1.0` -> 0
+1.15.2
+Called `D:\pkgconfig\bin\pkg-config.EXE --cflags gstreamer-gl-1.0` -> 0
+-ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/lib/gstreamer-1.0/include -ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include/orc-0.4 -ID:/gstreamer/1.0/x86_64/include/gstreamer-1.0 -ID:/gstreamer/1.0/x86_64/include -ID:/gstreamer/1.0/x86_64/include/glib-2.0 -ID:/gstreamer/1.0/x86_64/lib/glib-2.0/include
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-gl-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstgl-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Called `D:\pkgconfig\bin\pkg-config.EXE gstreamer-gl-1.0 --libs` -> 0
+-LD:/gstreamer/1.0/x86_64/lib -lgstgl-1.0 -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0 -lintl
+Dependency gstreamer-gl-1.0 found: YES 1.15.2
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmp9r6ba9ta
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmp9r6ba9ta\testfile.c /nologo /showIncludes /EP /Od 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("GL/glext.h")
+          #error "Header 'GL/glext.h' could not be found"
+         #endif
+        #else
+         #include <GL/glext.h>
+        #endif
+Compiler stdout:
+ 
+
+        
+         
+          
+Compiler stderr:
+ testfile.c
+C:\Users\brush\AppData\Local\Temp\tmp9r6ba9ta\testfile.c(4): fatal error C1189: #error:  "Header 'GL/glext.h' could not be found"
+
+Has header "GL/glext.h" : NO
+Configuring version.h using configuration
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmpkjw12opj
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmpkjw12opj\testfile.c /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmpkjw12opj\output.exe /MDd /Od dxgi.lib /link /FORCE:UNRESOLVED 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ testfile.c
+
+Compiler stderr:
+ 
+Library dxgi found: YES
+Running compile:
+Working directory:  C:\Users\brush\AppData\Local\Temp\tmpygxc2st8
+Command line:  cl C:\Users\brush\AppData\Local\Temp\tmpygxc2st8\testfile.c /nologo /showIncludes /FeC:\Users\brush\AppData\Local\Temp\tmpygxc2st8\output.exe /MDd /Od dxguid.lib /link /FORCE:UNRESOLVED 
+
+Code:
+ int main(int argc, char **argv) { return 0; }
+Compiler stdout:
+ testfile.c
+
+Compiler stderr:
+ 
+Library dxguid found: YES
+Build targets in project: 2
+WARNING: Deprecated features used:
+ * 0.48.0: {'python3 module'}
+Generating vcxproj gstmfx-1.0.
+Generating vcxproj gstmfx.

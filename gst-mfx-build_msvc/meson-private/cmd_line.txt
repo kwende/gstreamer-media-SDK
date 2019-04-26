@@ -1,0 +1,7 @@
+[options]
+mfx_h265_encoder = true
+mfx_vp9_decoder = true
+backend = vs2017
+
+[properties]
+

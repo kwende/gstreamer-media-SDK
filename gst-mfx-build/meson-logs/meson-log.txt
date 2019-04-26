@@ -1,0 +1,35 @@
+Build started at 2019-04-26T14:03:03.304998
+Main binary: d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\python.exe
+Python system: Windows
+The Meson build system
+Version: 0.50.0
+Source dir: d:\repos\gstreamer-media-SDK-ben
+Build dir: d:\repos\gstreamer-media-SDK-ben\gst-mfx-build
+Build type: native build
+Project name: GstMfx
+Project version: 1.4.0.9
+Sanity testing C compiler: cl
+Is cross compiler: False.
+Sanity check compiler command line: cl d:\repos\gstreamer-media-SDK-ben\gst-mfx-build\meson-private\sanitycheckc.c /Fed:\repos\gstreamer-media-SDK-ben\gst-mfx-build\meson-private\sanitycheckc.exe
+Sanity check compile stdout:
+sanitycheckc.c
+Microsoft (R) Incremental Linker Version 14.20.27508.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:d:\repos\gstreamer-media-SDK-ben\gst-mfx-build\meson-private\sanitycheckc.exe 
+sanitycheckc.obj 
+
+-----
+Sanity check compile stderr:
+Microsoft (R) C/C++ Optimizing Compiler Version 19.20.27508.1 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+-----
+Running test binary command: d:\repos\gstreamer-media-SDK-ben\gst-mfx-build\meson-private\sanitycheckc.exe
+Native C compiler: cl (msvc 19.20.27508.1)
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Configuring version.h using configuration
+
+meson.build:35:0: ERROR: Include dir /opt/intel/mediasdk/include does not exist.

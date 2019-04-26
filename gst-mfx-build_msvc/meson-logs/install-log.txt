@@ -1,0 +1,6 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+c:/lib/gstreamer-1.0\gstmfx.dll
+c:/lib/gstreamer-1.0\gstmfx.pdb
+c:/lib/gstreamer-1.0\gstmfx.lib
+c:/lib/gstreamer-1.0\gstmfx.pdb

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debugoptimized|x64">
+      <Configuration>debugoptimized</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B}</ProjectGuid>
+    <Keyword>x64Proj</Keyword>
+    <RootNamespace>gstmfx</RootNamespace>
+    <Platform>x64</Platform>
+    <ProjectName>gstmfx</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>.\</OutDir>
+    <IntDir>337dd9d@@gstmfx@sha\</IntDir>
+    <TargetName>gstmfx</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GSTREAMER_1_0_ROOT_X86_64)/include/gstreamer-1.0;$(GSTREAMER_1_0_ROOT_X86_64)/include/orc-0.4;$(GSTREAMER_1_0_ROOT_X86_64)/include;$(GSTREAMER_1_0_ROOT_X86_64)/include/glib-2.0;$(GSTREAMER_1_0_ROOT_X86_64)/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level2</WarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PrecompiledHeader />
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeed</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IntrinsicFunctions>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</WholeProgramOptimization>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Release|x64'">None</DebugInformationFormat>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Default</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions />
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>D:/gstreamer/1.0/x86_64/lib/glib-2.0.lib;D:/gstreamer/1.0/x86_64/lib/intl.lib;D:/gstreamer/1.0/x86_64/lib/gobject-2.0.lib;D:/gstreamer/1.0/x86_64/lib/gio-2.0.lib;D:/gstreamer/1.0/x86_64/lib/gmodule-2.0.lib;D:/gstreamer/1.0/x86_64/lib/gstreamer-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstvideo-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstbase-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstallocators-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstpbutils-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstaudio-1.0.lib;D:/Program Files (x86)/IntelSWTools/Intel(R) Media SDK 2018 R2/Software Development Kit/lib/x64/libmfx.lib;legacy_stdio_definitions.lib;d3d11.lib;gdi32.lib;shcore.lib;dxgi.lib;dxguid.lib;kernel32.lib;user32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\gst-libs\mfx\libgstmfx-1.0.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)gstmfx.dll</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>gstmfx.lib</ImportLibrary>
+      <ProgramDataBaseFileName>$(OutDir}gstmfx.pdb</ProgramDataBaseFileName>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='debugoptimized|x64'">xcopy "$(TargetDir)*.dll" "$(GSTREAMER_1_0_ROOT_X86_64)lib\gstreamer-1.0" /K /D /H /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\..\gst\mfx\meson.build" />
+  </ItemGroup>
+  <ItemGroup>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfx.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfx.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxpluginbase.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxpluginbase.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxpluginutil.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxpluginutil.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxvideobufferpool.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxvideobufferpool.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxvideocontext.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxvideocontext.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxvideomemory.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxvideomemory.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxvideometa.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxvideometa.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxdec.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxdec.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxsink.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxsink.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxpostproc.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxpostproc.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxsinkbin.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxsinkbin.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxenc.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxenc.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxenc_h264.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxenc_h264.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxenc_h265.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxenc_h265.c.obj</ObjectFileName>
+    </CLCompile>
+    <CLCompile Include="..\..\..\gst\mfx\gstmfxenc_jpeg.c">
+      <AdditionalOptions>"/wd4244" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WITH_D3D11_BACKEND;MFX_DECODER;MFX_VP9_DECODER;MFX_SINK;MFX_VPP;MFX_SINK_BIN;MFX_H264_ENCODER;MFX_H265_ENCODER;MFX_JPEG_ENCODER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>337dd9d@@gstmfx@sha;.;..\..\..\gst\mfx;..\..\..\gst\mfx\.;D:\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\/include;..\..\..\..\..\Program Files (x86)\IntelSWTools\Intel(R) Media SDK 2018 R2\Software Development Kit\include;..\..\..\.;..\..;..\..\..\gst-libs\mfx\.;..\..\gst-libs\mfx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)gstmfxenc_jpeg.c.obj</ObjectFileName>
+    </CLCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\REGEN.vcxproj">
+      <Project>{8D572CD1-08D6-4A84-980E-4DB434515C83}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\gst-libs\mfx\cf29cfa@@gstmfx-1.0@sta.vcxproj">
+      <Project>{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

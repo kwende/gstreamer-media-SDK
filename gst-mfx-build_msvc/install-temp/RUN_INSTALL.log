@@ -1,0 +1,6 @@
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(397,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Performing Custom Build Tools
+  Installing gst\mfx\gstmfx.dll to c:/lib/gstreamer-1.0
+  Installing gst\mfx\gstmfx.pdb to c:/lib/gstreamer-1.0
+  Installing gst\mfx\gstmfx.lib to c:/lib/gstreamer-1.0
+  Installing gst\mfx\gstmfx.pdb to c:/lib/gstreamer-1.0

@@ -1,0 +1,58 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gst-libs", "gst-libs", "{29CC7971-E502-5861-91FF-DBD20DAFD3D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mfx", "mfx", "{E2411483-6831-54E1-90E4-DD336E9CECAD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gstmfx-1.0", "gst-libs\mfx\cf29cfa@@gstmfx-1.0@sta.vcxproj", "{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gst", "gst", "{051CA001-E36B-5A81-8306-3081B432355B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mfx", "mfx", "{E479FE41-7D2A-50CB-8784-6C37B6791055}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gstmfx", "gst\mfx\337dd9d@@gstmfx@sha.vcxproj", "{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RUN_TESTS", "RUN_TESTS.vcxproj", "{E882254B-2FC1-4540-BC59-0593386EF691}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "REGEN", "REGEN.vcxproj", "{8D572CD1-08D6-4A84-980E-4DB434515C83}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RUN_INSTALL", "RUN_INSTALL.vcxproj", "{F92CBEE6-F094-45F8-AD0F-D480A9794E42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debugoptimized|x64 = debugoptimized|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632}.debugoptimized|x64.ActiveCfg = debugoptimized|x64
+		{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632}.debugoptimized|x64.Build.0 = debugoptimized|x64
+		{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632}.Release|x64.ActiveCfg = Release|x64
+		{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632}.Release|x64.Build.0 = Release|x64
+		{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B}.debugoptimized|x64.ActiveCfg = debugoptimized|x64
+		{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B}.debugoptimized|x64.Build.0 = debugoptimized|x64
+		{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B}.Release|x64.ActiveCfg = Release|x64
+		{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B}.Release|x64.Build.0 = Release|x64
+		{E882254B-2FC1-4540-BC59-0593386EF691}.debugoptimized|x64.ActiveCfg = debugoptimized|x64
+		{E882254B-2FC1-4540-BC59-0593386EF691}.Release|x64.ActiveCfg = Release|x64
+		{8D572CD1-08D6-4A84-980E-4DB434515C83}.debugoptimized|x64.ActiveCfg = debugoptimized|x64
+		{8D572CD1-08D6-4A84-980E-4DB434515C83}.debugoptimized|x64.Build.0 = debugoptimized|x64
+		{8D572CD1-08D6-4A84-980E-4DB434515C83}.Release|x64.ActiveCfg = Release|x64
+		{8D572CD1-08D6-4A84-980E-4DB434515C83}.Release|x64.Build.0 = Release|x64
+		{F92CBEE6-F094-45F8-AD0F-D480A9794E42}.debugoptimized|x64.ActiveCfg = debugoptimized|x64
+		{F92CBEE6-F094-45F8-AD0F-D480A9794E42}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2411483-6831-54E1-90E4-DD336E9CECAD} = {29CC7971-E502-5861-91FF-DBD20DAFD3D2}
+		{663E5F96-2B89-4AF2-8ADC-F67BB1EB2632} = {E2411483-6831-54E1-90E4-DD336E9CECAD}
+		{E479FE41-7D2A-50CB-8784-6C37B6791055} = {051CA001-E36B-5A81-8306-3081B432355B}
+		{90F03F06-F5D9-47C0-B6A3-6A19CDFFFE4B} = {E479FE41-7D2A-50CB-8784-6C37B6791055}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F62AA11-85DF-4CD6-A4E5-363681BC72D8}
+	EndGlobalSection
+EndGlobal

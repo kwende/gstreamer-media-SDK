@@ -1,0 +1,23 @@
+﻿  gstmfxcontext.c
+  gstmfxfilter.c
+  gstmfxprofile.c
+  gstmfxsurfacepool.c
+  gstmfxsurface.c
+  gstmfxtaskaggregator.c
+  gstmfxtask.c
+  gstmfxvalue.c
+  gstmfxwindow.c
+  video-format.c
+  gstmfxcompositefilter.c
+  gstmfxsurfacecomposition.c
+  gstmfxallocator_d3d11.c
+  gstmfxsurface_d3d11.c
+  gstmfxd3d11device.c
+  gstmfxdecoder.c
+  gstmfxwindow_d3d11.c
+  gstmfxencoder.c
+  gstmfxencoder_h264.c
+D:\repos\gstreamer-media-SDK-ben\gst-libs\mfx\gstmfxencoder_h264.c(402): warning C4307: '*': integral constant overflow
+  gstmfxencoder_h265.c
+  gstmfxencoder_jpeg.c
+  cf29cfa@@gstmfx-1.0@sta.vcxproj -> D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst-libs\mfx\.\libgstmfx-1.0.a
