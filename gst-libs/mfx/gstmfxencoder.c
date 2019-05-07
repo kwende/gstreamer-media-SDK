@@ -604,7 +604,7 @@ gst_mfx_encoder_init_properties (GstMfxEncoder * encoder,
   if (!priv->bitstream)
     return FALSE;
   priv->bs.Data = priv->bitstream->data;
-  priv->async_depth = DEFAULT_ASYNC_DEPTH;
+  priv->async_depth = 1; // DEFAULT_ASYNC_DEPTH;
   priv->input_memtype_is_system = memtype_is_system;
   /* Assume encoder memtype is in video memory first */
   priv->params.IOPattern = MFX_IOPATTERN_IN_VIDEO_MEMORY;
@@ -1014,7 +1014,8 @@ gst_mfx_encoder_set_encoding_params (GstMfxEncoder * encoder)
     } else {
       priv->params.mfx.IdrInterval = priv->idr_interval;
     }
-    priv->params.mfx.NumRefFrame = priv->num_refs;
+	//bdr
+	priv->params.mfx.NumRefFrame = 1; // priv->num_refs;
     priv->params.mfx.GopPicSize = priv->gop_size;
     priv->params.mfx.NumSlice = priv->num_slices;
 
@@ -1024,7 +1025,8 @@ gst_mfx_encoder_set_encoding_params (GstMfxEncoder * encoder)
       priv->params.mfx.MaxKbps = priv->vbv_max_bitrate;
     priv->params.mfx.BRCParamMultiplier = priv->brc_multiplier;
     priv->params.mfx.BufferSizeInKB = priv->max_buffer_size;
-    priv->params.mfx.GopRefDist = priv->gop_refdist < 0 ? 3 : priv->gop_refdist;
+	//bdr
+	priv->params.mfx.GopRefDist = 1; // priv->gop_refdist < 0 ? 3 : priv->gop_refdist;
 
     set_extended_coding_options (encoder);
   } else {
