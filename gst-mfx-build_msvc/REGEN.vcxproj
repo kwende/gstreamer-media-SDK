@@ -42,11 +42,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\regen.rule">
+    <CustomBuild Include="..\gst-mfx-build_msvc\meson-private\regen.rule">
       <Message>Checking whether solution needs to be regenerated.</Message>
       <Command>setlocal
 call  &gt; NUL
-"D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\Python\Miniconda\Miniconda3-x64\Scripts\meson" "--internal" "regencheck" "d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private"
+"meson" "--internal" "regencheck" "..\gst-mfx-build_msvc\meson-private"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -54,7 +54,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <Outputs>d:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\meson-private\regen.stamp</Outputs>
+      <Outputs>.\gst-mfx-build_msvc\meson-private\regen.stamp</Outputs>
       <AdditionalInputs>..\meson.build;..\version.h.in;..\gst-libs\meson.build;..\gst-libs\mfx\meson.build;..\gst\meson.build;..\gst\mfx\meson.build;meson-private/coredata.dat;..\meson_options.txt</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>

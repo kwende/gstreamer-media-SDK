@@ -1,2 +1,14 @@
 ﻿  Checking whether solution needs to be regenerated.
-  Everything is up-to-date, regeneration of build files is not needed.
+  Traceback (most recent call last):
+    File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts\meson-script.py", line 11, in <module>
+      load_entry_point('meson==0.50.1', 'console_scripts', 'meson')()
+    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\mesonmain.py", line 219, in main
+      return run(sys.argv[1:], launcher)
+    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\mesonmain.py", line 208, in run
+      return run_script_command(args[1], args[2:])
+    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\mesonmain.py", line 156, in run_script_command
+      return module.run(script_args)
+    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\scripts\regen_checker.py", line 47, in run
+      regeninfo = pickle.load(f)
+  _pickle.UnpicklingError: invalid load key, '-'.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(209,5): error MSB6006: "cmd.exe" exited with code 1.
