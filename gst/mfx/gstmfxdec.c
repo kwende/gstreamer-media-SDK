@@ -421,7 +421,8 @@ gst_mfxdec_push_decoded_frame (GstMfxDec * mfxdec, GstVideoCodecFrame * frame)
     }
   }
 
-  return gst_video_decoder_finish_frame (vdec, frame);
+  ret = gst_video_decoder_finish_frame (vdec, frame);
+  return ret; 
   /* ERRORS */
 error_create_buffer:
   {

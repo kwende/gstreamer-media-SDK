@@ -486,7 +486,7 @@ gst_mfx_window_d3d11_init_swap_chain (GstMfxWindowD3D11 * window)
       );
 
   /* if chosen format isn't a possible render target, 
-     we use a (A)RGB one the VideoProcessor can convert to. */
+     we use a ( A)RGB one the VideoProcessor canconvert to. */
   if (swap_chain_desc.Format == DXGI_FORMAT_P010)
     swap_chain_desc.Format = DXGI_FORMAT_R10G10B10A2_UNORM;
   else if (swap_chain_desc.Format == DXGI_FORMAT_NV12

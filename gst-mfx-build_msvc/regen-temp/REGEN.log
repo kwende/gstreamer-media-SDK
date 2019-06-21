@@ -1,14 +1,17 @@
 ﻿  Checking whether solution needs to be regenerated.
   Traceback (most recent call last):
-    File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\Scripts\meson-script.py", line 11, in <module>
-      load_entry_point('meson==0.50.1', 'console_scripts', 'meson')()
-    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\mesonmain.py", line 219, in main
+    File "d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\lib\runpy.py", line 193, in _run_module_as_main
+      "__main__", mod_spec)
+    File "d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\lib\runpy.py", line 85, in _run_code
+      exec(code, run_globals)
+    File "D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\Microsoft\Python\Miniconda\Miniconda3-x64\Scripts\meson.exe\__main__.py", line 9, in <module>
+    File "d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\lib\site-packages\mesonbuild\mesonmain.py", line 219, in main
       return run(sys.argv[1:], launcher)
-    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\mesonmain.py", line 208, in run
+    File "d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\lib\site-packages\mesonbuild\mesonmain.py", line 208, in run
       return run_script_command(args[1], args[2:])
-    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\mesonmain.py", line 156, in run_script_command
+    File "d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\lib\site-packages\mesonbuild\mesonmain.py", line 156, in run_script_command
       return module.run(script_args)
-    File "c:\program files (x86)\microsoft visual studio\shared\python37_64\lib\site-packages\mesonbuild\scripts\regen_checker.py", line 47, in run
+    File "d:\program files (x86)\microsoft visual studio\2019\enterprise\common7\ide\extensions\microsoft\python\miniconda\miniconda3-x64\lib\site-packages\mesonbuild\scripts\regen_checker.py", line 47, in run
       regeninfo = pickle.load(f)
   _pickle.UnpicklingError: invalid load key, '-'.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(209,5): error MSB6006: "cmd.exe" exited with code 1.
+D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(220,5): error MSB6006: "cmd.exe" exited with code 1.

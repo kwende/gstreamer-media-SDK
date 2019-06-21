@@ -2,7 +2,8 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugoptimized|x64'">
     <LocalDebuggerCommand>D:\gstreamer\1.0\x86_64\bin\gst-launch-1.0.exe</LocalDebuggerCommand>
-    <LocalDebuggerCommandArguments>gstfeynman num-buffers=500  ! mfxh264enc ! h264parse ! mpegtsmux ! filesink location=test.mp4</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>rtspsrc location=rtsp://ocuvera:B3nRushSDK@172.17.5.247/live ! decodebin ! video/x-raw(memory:MFXSurface),width=1280,height=960,format=NV12 ! videoconvert ! fakesink</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment>GST_DEBUG=4</LocalDebuggerEnvironment>
   </PropertyGroup>
 </Project>
