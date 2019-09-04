@@ -37,6 +37,14 @@
     <TargetName>libgstmfx-1.0</TargetName>
     <TargetExt>.a</TargetExt>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugoptimized|x64'">
+    <IncludePath>$(INTELMEDIASDKROOT)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(INTELMEDIASDKROOT)lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(INTELMEDIASDKROOT)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(INTELMEDIASDKROOT)lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>$(GSTREAMER_1_0_ROOT_X86_64)/include/gstreamer-1.0;$(GSTREAMER_1_0_ROOT_X86_64)/include/orc-0.4;$(GSTREAMER_1_0_ROOT_X86_64)/include;$(GSTREAMER_1_0_ROOT_X86_64)/include/glib-2.0;$(GSTREAMER_1_0_ROOT_X86_64)/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

@@ -1,18 +1,4 @@
-﻿  gstmfx.c
-  gstmfxpluginbase.c
-  gstmfxpluginutil.c
-  gstmfxvideobufferpool.c
-  gstmfxvideocontext.c
-  gstmfxvideomemory.c
-  gstmfxvideometa.c
-  gstmfxdec.c
-  gstmfxsink.c
-  gstmfxpostproc.c
-  gstmfxsinkbin.c
-  gstmfxenc.c
-  gstmfxenc_h264.c
-  gstmfxenc_h265.c
-  gstmfxenc_jpeg.c
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1875,5): warning : The referenced project '.\gst-mfx-build_msvc\REGEN.vcxproj' does not exist.
   gstmfx.c.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
      Creating library gstmfx.lib and object gstmfx.exp
@@ -20,14 +6,14 @@ LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; us
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
   Finished generating code
-libmfx.lib(main.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(main.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_critical_section.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_critical_section.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_dispatcher.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_dispatcher.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_dxva2_device.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_dxva2_device.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_function_table.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_function_table.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_library_iterator.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_library_iterator.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_load_dll.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_load_dll.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_load_plugin.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_load_plugin.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_plugin_hive.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_plugin_hive.obj)' or at ''; linking object as if no debug info
-libmfx.lib(mfx_win_reg_key.obj) : warning LNK4099: PDB '' was not found with 'libmfx.lib(mfx_win_reg_key.obj)' or at ''; linking object as if no debug info
+libmfx.lib(main.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(main.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_critical_section.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_critical_section.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_dispatcher.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_dispatcher.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_dxva2_device.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_dxva2_device.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_function_table.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_function_table.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_library_iterator.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_library_iterator.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_load_dll.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_load_dll.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_load_plugin.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_load_plugin.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_plugin_hive.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_plugin_hive.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
+libmfx.lib(mfx_win_reg_key.obj) : warning LNK4099: PDB 'libmfx_vc80.pdb' was not found with 'libmfx.lib(mfx_win_reg_key.obj)' or at 'D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\libmfx_vc80.pdb'; linking object as if no debug info
   337dd9d@@gstmfx@sha.vcxproj -> D:\repos\gstreamer-media-SDK-ben\gst-mfx-build_msvc\gst\mfx\.\gstmfx.dll

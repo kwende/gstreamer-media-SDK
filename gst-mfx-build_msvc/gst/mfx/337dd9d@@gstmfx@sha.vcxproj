@@ -37,6 +37,14 @@
     <TargetName>gstmfx</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debugoptimized|x64'">
+    <IncludePath>$(INTELMEDIASDKROOT)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(INTELMEDIASDKROOT)lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(INTELMEDIASDKROOT)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(INTELMEDIASDKROOT)lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>$(GSTREAMER_1_0_ROOT_X86_64)/include/gstreamer-1.0;$(GSTREAMER_1_0_ROOT_X86_64)/include/orc-0.4;$(GSTREAMER_1_0_ROOT_X86_64)/include;$(GSTREAMER_1_0_ROOT_X86_64)/include/glib-2.0;$(GSTREAMER_1_0_ROOT_X86_64)/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -59,7 +67,7 @@
     </ResourceCompile>
     <Link>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>D:/gstreamer/1.0/x86_64/lib/glib-2.0.lib;D:/gstreamer/1.0/x86_64/lib/intl.lib;D:/gstreamer/1.0/x86_64/lib/gobject-2.0.lib;D:/gstreamer/1.0/x86_64/lib/gio-2.0.lib;D:/gstreamer/1.0/x86_64/lib/gmodule-2.0.lib;D:/gstreamer/1.0/x86_64/lib/gstreamer-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstvideo-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstbase-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstallocators-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstpbutils-1.0.lib;D:/gstreamer/1.0/x86_64/lib/gstaudio-1.0.lib;D:/Program Files (x86)/IntelSWTools/Intel(R) Media SDK 2018 R2/Software Development Kit/lib/x64/libmfx.lib;legacy_stdio_definitions.lib;d3d11.lib;gdi32.lib;shcore.lib;dxgi.lib;dxguid.lib;kernel32.lib;user32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\gst-libs\mfx\libgstmfx-1.0.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(GSTREAMER_1_0_ROOT_X86_64)lib/glib-2.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/intl.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gobject-2.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gio-2.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gmodule-2.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gstreamer-1.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gstvideo-1.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gstbase-1.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gstallocators-1.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gstpbutils-1.0.lib;$(GSTREAMER_1_0_ROOT_X86_64)lib/gstaudio-1.0.lib;libmfx.lib;legacy_stdio_definitions.lib;d3d11.lib;gdi32.lib;shcore.lib;dxgi.lib;dxguid.lib;kernel32.lib;user32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\gst-libs\mfx\libgstmfx-1.0.a;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)gstmfx.dll</OutputFile>
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>gstmfx.lib</ImportLibrary>
